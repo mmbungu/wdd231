@@ -88,6 +88,7 @@ function renderCourses(courses) {
         span.classList.add('badge')
         if(course.completed){
             span.classList.add('completed')
+            span.title = "Course already completed"
         }
 
         span.textContent = course.title

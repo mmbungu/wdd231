@@ -140,6 +140,13 @@ main{
     padding: .1rem 0;
 }
 
+.badge-body .badge.completed::before
+{
+    content: "\2713";
+    color: greenyellow;
+    align-items: center;
+}
+
 .badge-body .badge.completed{
     background-color: chocolate;
     color: #ddd
