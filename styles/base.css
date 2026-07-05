@@ -79,11 +79,6 @@ main{
     padding: 0 .8rem;
 }
 
-/* main h1{
-    margin: 0;
-    padding: 0;
-} */
-
 .card{
     box-shadow: 0 0 0 1px black;
     background-color: #ddd;
@@ -148,6 +143,10 @@ main{
 .badge-body .badge.completed{
     background-color: chocolate;
     color: #ddd
+}
+
+div:has(> #credit){
+    text-align: center;
 }
 
 footer{

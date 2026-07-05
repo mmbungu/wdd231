@@ -43,8 +43,4 @@
     .badge-body{
         flex-direction: row;
     }
-
-    div:has(> #credit){
-        text-align: center;
-    }
 }
