@@ -1,0 +1,165 @@
+header {
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    column-gap: 8px;
+    align-items: end;
+    border-bottom: 1px solid #ddd;
+    padding: 5px 0 5px 10px;
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+header span {
+    font-size: 1.2rem;
+    color: #3D405B;
+}
+
+.hamburger {
+    background: transparent;
+    border: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hamburger::before {
+    content: "\2630";
+    font-size: 1.5rem;
+}
+
+.hamburger.show::before {
+    content: "\00D7";
+    font-size: 1.5rem;
+
+}
+
+.navigation {
+    display: none;
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation a {
+    display: block;
+    text-decoration: none;
+    color: #3D405B;
+    padding: .8rem 10px;
+    border: 1px solid #ddd;
+}
+
+.navigation li.current{
+    background-color: #ccc;
+}
+
+.navigation a:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+main{
+    display: grid;
+    gap: 1rem;
+    padding: 0 .8rem;
+}
+
+/* main h1{
+    margin: 0;
+    padding: 0;
+} */
+
+.card{
+    box-shadow: 0 0 0 1px black;
+    background-color: #ddd;
+}
+
+.card .card-title{
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+.card .card-title h2{
+    padding: 0;
+    margin: 0;
+}
+
+.card .card-content{
+    padding: 0 .8rem;
+}
+
+.card .student-profile{
+    width: 200px;
+    margin: 1.5rem;
+    display: block;
+    margin: auto
+}
+
+.badge-header{
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    margin: .5rem 0;
+    font-weight: bold;
+}
+
+.badge-body{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin: .5rem 0; 
+    border-radius: .3rem;
+}
+
+.badge-header span, .badge-body span{
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+.badge-header .badge{
+    border-radius: .3rem;
+    border: 2px solid black;
+    padding: .25rem 0;
+}
+
+.badge-body .badge{
+    box-shadow: 0 0 0 1px gray;
+    border-radius: .3rem;
+    padding: .1rem 0;
+}
+
+.badge-body .badge.completed{
+    background-color: chocolate;
+    color: #ddd
+}
+
+footer{
+    text-align: center;
+}
+
+.social-media{
+    display: flex;
+    flex-direction: row;
+    margin: .5rem;
+    justify-content: center;
+}
+
+.social-media img{
+    width: 34px;
+    height: 34px;
+}
+
+.copyright{
+    background-color: #ddd;
+    padding: .5rem;
+}
