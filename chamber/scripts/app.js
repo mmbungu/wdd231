@@ -1,4 +1,4 @@
-const url = "/chamber/data/chambers.json"
+const url = "https://mmbungu.github.io/wdd231/chamber/data/chambers.json"
 
 async function getChambers()
 {
