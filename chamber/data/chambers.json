@@ -1,0 +1,81 @@
+{
+    "companies": [
+        {
+            "name": "Kinshasa Logistics SARL",
+            "address": "Avenue Mobutu 45, Gombe, Kinshasa",
+            "phone": "+243 81 234 5678",
+            "website": "https://www.kinshasalogistics.cd",
+            "email": "info@kinshasalogistics.cd",
+            "image": "https://placehold.co/80x80",
+            "level": 3,
+            "description": "Fournisseur de solutions de transport et de logistique pour le commerce national et international.",
+            "sector": "Logistique"
+        },
+        {
+            "name": "Katanga Agro Export",
+            "address": "Route de Lubumbashi 12, Kalubwe, Lubumbashi",
+            "phone": "+243 99 876 5432",
+            "website": "https://www.katangaagro.cd",
+            "email": "info@katangaagro.cd",
+            "image": "https://placehold.co/80x80",
+            "level": 2,
+            "description": "Exportateur de produits agricoles bios et de matiéres premiéres vers l'Afrique et l'Europe.",
+            "sector": "Agriculture"
+        },
+        {
+            "name": "RDC Energie Verte",
+            "address": "Boulevard du 30 Juin 87, Gombe, Kinshasa",
+            "phone": "+243 82 345 6789",
+            "website": "https://www.rdcenergieverte.cd",
+            "email": "info@rdcenergieverte.cd",
+            "image": "https://placehold.co/80x80",
+            "level": 1,
+            "description": "Opérateur de projets d'énergie solaire et hydraulique pour les communautés locales.",
+            "sector": "énergie renouvelable"
+        },
+        {
+            "name": "Lubumbashi Tech Hub",
+            "address": "Immeuble Smart City, Avenue Kapemba 23, Lubumbashi",
+            "phone": "+243 84 765 4321",
+            "website": "https://www.lubumbashitech.cd",
+            "email": "info@lubumbashitech.cd",
+            "image": "https://placehold.co/80x80",
+            "level": 3,
+            "description": "Incubateur et fournisseur de services informatiques pour les startups et PME en RDC.",
+            "sector": "Technologie"
+        },
+        {
+            "name": "Congo Health Supplies",
+            "address": "Quartier N'Djili, Route de l'aéroport 144, Kinshasa",
+            "phone": "+243 81 987 6543",
+            "website": "https://www.congohealth.cd",
+            "email": "info@congohealth.cd",
+            "image": "https://placehold.co/80x80",
+            "level": 2,
+            "description": "Distributeur de matériel médical, produits pharmaceutiques et équipements de protection.",
+            "sector": "Santé"
+        },
+        {
+            "name": "Bas Congo Construction",
+            "address": "Avenue de l'Université 8, Matadi",
+            "phone": "+243 85 112 2334",
+            "website": "https://www.bascogoconstruction.cd",
+            "email": "info@bascogoconstruction.cd",
+            "image": "https://placehold.co/80x80",
+            "level": 1,
+            "description": "Entreprise générale de construction spécialisée dans les infrastructures routiéres et bétiments publics.",
+            "sector": "Construction"
+        },
+        {
+            "name": "Virunga Tourisme et Safaris",
+            "address": "Village de Rumangabo, Parc National des Virunga",
+            "phone": "+243 81 556 7788",
+            "website": "https://www.virungasafaris.cd",
+            "email": "info@virungasafaris.cd",
+            "image": "https://placehold.co/80x80",
+            "level": 3,
+            "description": "Agence de tourisme spécialisée dans les safaris, trekking et expériences écotouristiques en RDC.",
+            "sector": "Tourisme"
+        }
+    ]
+}
