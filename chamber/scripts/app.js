@@ -116,7 +116,6 @@ getChambers().then(chambers => {
     }
     if (spotlights) {
         displayChambers(getRandomSpotlights(chambers), spotlights)
-        // displaySpotlights(chambers);
     }
 });
 
