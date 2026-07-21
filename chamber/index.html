@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Directory - CCNRDC Chambre de commerce</title>
+    <title>Home - CCNRDC Chambre de commerce</title>
     <meta name="description" content="Welcome to the CCNRDC Chamber of Commerce website. This is the official website where we showcase our services, events, and resources for businesses.">
     <meta name="author" content="Mercy Mbungu">
 
@@ -35,8 +35,8 @@
             <button id="nav-button" class="hamburger" aria-label="navigation"></button>
             <nav id="nav-bar" class="navigation">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li class="current"><a href="directory.html">Directory</a></li>
+                    <li class="current"><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
                     <li><a href="#">Join</a></li>
                     <li><a href="#">Discover</a></li>
                 </ul>
@@ -44,12 +44,34 @@
         </header>
 
         <main>
-            <h1>Directory</h1>
-            <div class="menu">
-                <button id="grid">Grid</button>
-                <button id="list">List</button>
-            </div>
-            <div id="card-container" class="card-grid"></div>
+            <section class="hero">
+                <img src="images/hero.jpg" alt="CCNE-RDC Chamber of Commerce">
+                <a class="cta" href="join.html">Join the Chamber</a>
+            </section>
+
+            <section class="events">
+                <h2>Current Events</h2>
+                <article>
+                    <h3>Networking Breakfast</h3>
+                    <span class="date">Date: Tuesday, August 5, 2026</span>
+                    <p>Connect with local business leaders over breakfast and discover partnership opportunities.</p>
+                </article>
+                <article>
+                    <h3>Business Development Workshop</h3>
+                    <span class="date">Date: Friday, August 15, 2026</span>
+                    <p>Learn practical strategies to grow your business in Kinshasa and beyond.</p>
+                </article>
+            </section>
+
+            <section class="weather">
+                <h2>Weather</h2>
+                <div id="weather-info"></div>
+            </section>
+
+            <section class="spotlights">
+                <h2>Member Spotlights</h2>
+                <div id="spotlights" class="card-grid"></div>
+            </section>
         </main>
         <footer>
             <div class="description">
