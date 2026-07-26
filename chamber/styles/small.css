@@ -485,7 +485,7 @@ section article {
     background-color: #e4e4e4;
     border-radius: 8px;
     padding: 1rem;
-    border-left: 5px solid var(--accent-color);
+    border-left: 5px solid var(--primary-color);
     opacity: 0;
     transform: translateY(1rem);
     animation: cardFadeIn 0.7s ease forwards;
@@ -521,7 +521,7 @@ section article {
 }
 
 .membership-card a {
-    color: var(--accent-color);
+    color: var(--primary-color);
     font-weight: 600;
     text-decoration: none;
 }
