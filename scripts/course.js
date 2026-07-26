@@ -90,8 +90,11 @@ function renderCourses(courses) {
             span.classList.add('completed')
             span.title = "Course already completed"
         }
-
+        
         span.textContent = course.title
+        span.addEventListener('click', () => {
+            displayCourseDetails(course)
+        })
         courseElement.appendChild(span)
         credits += course.credits
     })
@@ -118,3 +121,23 @@ document.querySelectorAll(".badge-header .badge").forEach(filterElement => {
 document.addEventListener("DOMContentLoaded", function (e) {
     renderCourses(courses)
 })
+
+const courseDetails = document.querySelector('#course-details')
+
+function displayCourseDetails(course) {
+  courseDetails.innerHTML = '';
+  courseDetails.innerHTML = `
+    <button id="closeModal">❌</button>
+    <h2>${course.subject} ${course.number}</h2>
+    <h3>${course.title}</h3>
+    <p><strong>Credits</strong>: ${course.credits}</p>
+    <p><strong>Certificate</strong>: ${course.certificate}</p>
+    <p>${course.description}</p>
+    <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+  `;
+  courseDetails.showModal();
+  
+  closeModal.addEventListener("click", () => {
+    courseDetails.close();
+  });
+}

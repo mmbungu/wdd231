@@ -389,6 +389,228 @@ section article {
     display: none;
 }
 
+/* Join page */
+.join-intro {
+    margin-bottom: 1.25rem;
+    color: #555;
+}
+
+.join-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.join-form {
+    display: grid;
+    gap: 1rem;
+}
+
+.join-form label {
+    display: grid;
+    gap: 0.35rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    font-size: 0.95rem;
+}
+
+.join-form input[type="text"],
+.join-form input[type="email"],
+.join-form input[type="tel"],
+.join-form textarea,
+.join-form input[type="submit"] {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.65rem 0.75rem;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    width: 100%;
+}
+
+.join-form textarea {
+    resize: vertical;
+}
+
+.join-form input:focus,
+.join-form textarea:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+    border-color: var(--accent-color);
+}
+
+.membership-levels {
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    padding: 0.75rem 1rem 1rem;
+}
+
+.membership-levels legend {
+    font-weight: 700;
+    color: var(--secondary-color);
+    padding: 0 0.35rem;
+}
+
+.membership-levels label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+.membership-levels input[type="radio"] {
+    width: auto;
+}
+
+.join-form input[type="submit"] {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+.join-form input[type="submit"]:hover {
+    background-color: var(--secondary-color);
+}
+
+.membership-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.membership-card {
+    background-color: #e4e4e4;
+    border-radius: 8px;
+    padding: 1rem;
+    border-left: 5px solid var(--accent-color);
+    opacity: 0;
+    transform: translateY(1rem);
+    animation: cardFadeIn 0.7s ease forwards;
+}
+
+.membership-card:nth-child(1) { animation-delay: 0.1s; }
+.membership-card:nth-child(2) { animation-delay: 0.25s; }
+.membership-card:nth-child(3) { animation-delay: 0.4s; }
+.membership-card:nth-child(4) { animation-delay: 0.55s; }
+
+.membership-card-np { border-left-color: #6b7280; }
+.membership-card-bronze { border-left-color: #b45309; }
+.membership-card-silver { border-left-color: #64748b; }
+.membership-card-gold { border-left-color: #ca8a04; }
+
+@keyframes cardFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.membership-card h2 {
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.35rem;
+}
+
+.membership-card p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.75rem;
+}
+
+.membership-card a {
+    color: var(--accent-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.membership-card a:hover,
+.membership-card a:focus {
+    text-decoration: underline;
+}
+
+.membership-modal {
+    border: none;
+    border-radius: 8px;
+    padding: 1.5rem;
+    max-width: 28rem;
+    width: calc(100% - 2rem);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.membership-modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.membership-modal h2 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+    padding-right: 2rem;
+}
+
+.membership-cost {
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-bottom: 0.75rem;
+}
+
+.membership-modal ul {
+    margin-left: 1.25rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.close-modal {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    border: none;
+    background: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #555;
+    line-height: 1;
+}
+
+/* Thank you page */
+.thankyou p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.submitted-info {
+    background-color: #e4e4e4;
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin: 1.25rem 0;
+}
+
+.submitted-info p {
+    margin-bottom: 0.65rem;
+    font-size: 0.95rem;
+}
+
+.submitted-info .title {
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.cta-link {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.65rem 1.25rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.cta-link:hover {
+    background-color: var(--secondary-color);
+}
+
 footer {
     background-color: #e4e4e4;
     padding: 1.5rem 1rem;

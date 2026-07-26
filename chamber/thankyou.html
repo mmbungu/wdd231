@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - CCNRDC Chambre de commerce</title>
-    <meta name="description" content="Welcome to the CCNRDC Chamber of Commerce website. This is the official website where we showcase our services, events, and resources for businesses.">
+    <title>Thank You - CCNRDC Chambre de commerce</title>
+    <meta name="description" content="Thank you for joining the CCNRDC Chamber of Commerce.">
     <meta name="author" content="Mercy Mbungu">
 
-    <meta property="og:title" content="CCNRDC - Chambre de commerce">
-    <meta property="og:description" content="Welcome to the CCNRDC Chamber of Commerce website. This is the official website where we showcase our services, events, and resources for businesses.">
+    <meta property="og:title" content="CCNRDC - Thank You">
+    <meta property="og:description" content="Thank you for joining the CCNRDC Chamber of Commerce.">
     <meta property="og:image" content="https://mmbungu.github.io/wdd231/chamber/images/logo.png">
-    <meta property="og:url" content="https://mmbungu.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://mmbungu.github.io/wdd231/chamber/thankyou.html">
 
-    <meta name="twitter:title" content="CCNRDC - Chambre de commerce">
-    <meta name="twitter:description" content="Welcome to the CCNRDC Chamber of Commerce website. This is the official website where we showcase our services, events, and resources for businesses.">
-    <meta name="twitter:url" content="https://mmbungu.github.io/wdd231/chamber/directory.html">
+    <meta name="twitter:title" content="CCNRDC - Thank You">
+    <meta name="twitter:description" content="Thank you for joining the CCNRDC Chamber of Commerce.">
+    <meta name="twitter:url" content="https://mmbungu.github.io/wdd231/chamber/thankyou.html">
     <meta name="twitter:image" content="https://mmbungu.github.io/wdd231/chamber/images/logo.png">
 
     <link rel="stylesheet" href="styles/small.css">
@@ -23,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/app.js" defer></script>
+    <script src="scripts/join.js" defer></script>
     <link rel="icon" href="images/favicon.ico">
 </head>
 <body>
@@ -35,45 +35,30 @@
             <button id="nav-button" class="hamburger" aria-label="navigation"></button>
             <nav id="nav-bar" class="navigation">
                 <ul>
-                    <li class="current"><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="directory.html">Directory</a></li>
-                    <li><a href="join.html">Join</a></li>
+                    <li class="current"><a href="join.html">Join</a></li>
                     <li><a href="#">Discover</a></li>
                 </ul>
             </nav>
         </header>
 
-        <main>
-            <section class="hero">
-                <h1>CCNRDC Chambre de commerce</h1>
-                <img src="images/hero.webp" alt="CCNE-RDC Chamber of Commerce">
-                <a class="cta" href="join.html">Join the Chamber</a>
-            </section>
+        <main class="thankyou">
+            <h1>Thank You!</h1>
+            <p>We appreciate your application to join CCNE-RDC. Here is a summary of the information you submitted:</p>
 
-            <section class="events">
-                <h2>Current Events</h2>
-                <article>
-                    <h3>Networking Breakfast</h3>
-                    <span class="date">Date: Tuesday, August 5, 2026</span>
-                    <p>Connect with local business leaders over breakfast and discover partnership opportunities.</p>
-                </article>
-                <article>
-                    <h3>Business Development Workshop</h3>
-                    <span class="date">Date: Friday, August 15, 2026</span>
-                    <p>Learn practical strategies to grow your business in Kinshasa and beyond.</p>
-                </article>
-            </section>
+            <div class="submitted-info">
+                <p><span class="title">First Name:</span> <span id="show-firstname"></span></p>
+                <p><span class="title">Last Name:</span> <span id="show-lastname"></span></p>
+                <p><span class="title">Email:</span> <span id="show-email"></span></p>
+                <p><span class="title">Mobile Phone:</span> <span id="show-phone"></span></p>
+                <p><span class="title">Business Name:</span> <span id="show-organization"></span></p>
+                <p><span class="title">Submitted:</span> <span id="show-timestamp"></span></p>
+            </div>
 
-            <section class="weather">
-                <h2>Weather</h2>
-                <div id="weather-info"></div>
-            </section>
-
-            <section class="spotlights">
-                <h2>Member Spotlights</h2>
-                <div id="spotlights" class="card-grid"></div>
-            </section>
+            <p><a class="cta-link" href="index.html">Return to Home</a></p>
         </main>
+
         <footer>
             <div class="description">
                 <p><strong>CCNE-RDC</strong></p>

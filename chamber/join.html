@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join - CCNRDC Chambre de commerce</title>
+    <meta name="description"
+        content="Join the CCNRDC Chamber of Commerce. Choose a membership level and submit your application.">
+    <meta name="author" content="Mercy Mbungu">
+
+    <meta property="og:title" content="CCNRDC - Join the Chamber">
+    <meta property="og:description"
+        content="Join the CCNRDC Chamber of Commerce. Choose a membership level and submit your application.">
+    <meta property="og:image" content="https://mmbungu.github.io/wdd231/chamber/images/logo.png">
+    <meta property="og:url" content="https://mmbungu.github.io/wdd231/chamber/join.html">
+
+    <meta name="twitter:title" content="CCNRDC - Join the Chamber">
+    <meta name="twitter:description"
+        content="Join the CCNRDC Chamber of Commerce. Choose a membership level and submit your application.">
+    <meta name="twitter:url" content="https://mmbungu.github.io/wdd231/chamber/join.html">
+    <meta name="twitter:image" content="https://mmbungu.github.io/wdd231/chamber/images/logo.png">
+
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+    <link rel="icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="images/logo-icon.png" width="16" height="16" alt="Home">
+            <span>CCNE-RDC</span>
+            <button id="mode-button" class="mode-switch"></button>
+            <button id="nav-button" class="hamburger" aria-label="navigation"></button>
+            <nav id="nav-bar" class="navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li class="current"><a href="join.html">Join</a></li>
+                    <li><a href="#">Discover</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h1>Join the Chamber</h1>
+            <p class="join-intro">Complete the application below to become a member of CCNE-RDC.</p>
+
+            <div class="join-layout">
+                <form class="join-form" action="thankyou.html" method="get">
+                    <label>First Name
+                        <input type="text" name="firstname" id="firstname" title="Please enter your first name"
+                            autocomplete="given-name" required>
+                    </label>
+
+                    <label>Last Name
+                        <input type="text" name="lastname" id="lastname" title="Please enter your last name"
+                            autocomplete="family-name" required>
+                    </label>
+
+                    <label>Organizational Title
+                        <input type="text" name="orgtitle" id="orgtitle"
+                            title="Letters, hyphens, and spaces only. Minimum 7 characters."
+                            autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+                    </label>
+
+                    <label>Email Address
+                        <input type="email" name="email" id="email" title="Please enter a valid email address"
+                            autocomplete="email" placeholder="example@email.com" required>
+                    </label>
+
+                    <label>Mobile Phone
+                        <input type="tel" name="phone" id="phone" title="Please enter your mobile phone number"
+                            autocomplete="tel" required>
+                    </label>
+
+                    <label>Business / Organization Name
+                        <input type="text" name="organization" id="organization"
+                            title="Please enter your business or organization name" autocomplete="organization"
+                            required>
+                    </label>
+
+                    <fieldset class="membership-levels">
+                        <legend>Membership Level</legend>
+                        <label>
+                            <input type="radio" name="membership" value="np" required>
+                            NP Membership
+                        </label>
+                        <label>
+                            <input type="radio" name="membership" value="bronze">
+                            Bronze Membership
+                        </label>
+                        <label>
+                            <input type="radio" name="membership" value="silver">
+                            Silver Membership
+                        </label>
+                        <label>
+                            <input type="radio" name="membership" value="gold">
+                            Gold Membership
+                        </label>
+                    </fieldset>
+
+                    <label>Business Description
+                        <textarea name="description" id="description" title="Describe your business or organization"
+                            rows="4"></textarea>
+                    </label>
+
+                    <input type="hidden" name="timestamp" id="timestamp">
+
+                    <input type="submit" value="Submit Application">
+                </form>
+
+                <aside class="membership-cards" aria-label="Membership levels">
+                    <article class="membership-card membership-card-np">
+                        <h2>NP Membership</h2>
+                        <p>Free for non-profit organizations.</p>
+                        <a href="#np-modal" data-modal="np-modal">Learn more</a>
+                    </article>
+
+                    <article class="membership-card membership-card-bronze">
+                        <h2>Bronze Membership</h2>
+                        <p>$100 / year</p>
+                        <a href="#bronze-modal" data-modal="bronze-modal">Learn more</a>
+                    </article>
+
+                    <article class="membership-card membership-card-silver">
+                        <h2>Silver Membership</h2>
+                        <p>$250 / year</p>
+                        <a href="#silver-modal" data-modal="silver-modal">Learn more</a>
+                    </article>
+
+                    <article class="membership-card membership-card-gold">
+                        <h2>Gold Membership</h2>
+                        <p>$500 / year</p>
+                        <a href="#gold-modal" data-modal="gold-modal">Learn more</a>
+                    </article>
+                </aside>
+            </div>
+
+            <dialog id="np-modal" class="membership-modal">
+                <button type="button" class="close-modal" aria-label="Close">×</button>
+                <h2>NP Membership</h2>
+                <p class="membership-cost">Cost: Free</p>
+                <ul>
+                    <li>Directory listing for non-profit organizations</li>
+                    <li>Access to the chamber newsletter</li>
+                    <li>Invitations to selected community events</li>
+                    <li>Networking with local partners</li>
+                </ul>
+            </dialog>
+
+            <dialog id="bronze-modal" class="membership-modal">
+                <button type="button" class="close-modal" aria-label="Close">×</button>
+                <h2>Bronze Membership</h2>
+                <p class="membership-cost">Cost: $100 / year</p>
+                <ul>
+                    <li>All NP benefits</li>
+                    <li>Member training workshops</li>
+                    <li>10% discount on chamber events</li>
+                    <li>Business listing in the online directory</li>
+                </ul>
+            </dialog>
+
+            <dialog id="silver-modal" class="membership-modal">
+                <button type="button" class="close-modal" aria-label="Close">×</button>
+                <h2>Silver Membership</h2>
+                <p class="membership-cost">Cost: $250 / year</p>
+                <ul>
+                    <li>All Bronze benefits</li>
+                    <li>Eligibility for homepage spotlight ads</li>
+                    <li>25% discount on chamber events</li>
+                    <li>Advertising opportunities in newsletters</li>
+                    <li>Priority registration for special events</li>
+                </ul>
+            </dialog>
+
+            <dialog id="gold-modal" class="membership-modal">
+                <button type="button" class="close-modal" aria-label="Close">×</button>
+                <h2>Gold Membership</h2>
+                <p class="membership-cost">Cost: $500 / year</p>
+                <ul>
+                    <li>All Silver benefits</li>
+                    <li>Premier homepage spotlight placement</li>
+                    <li>50% discount on chamber events</li>
+                    <li>Exclusive executive networking dinners</li>
+                    <li>Featured advertising and training access</li>
+                </ul>
+            </dialog>
+        </main>
+
+        <footer>
+            <div class="description">
+                <p><strong>CCNE-RDC</strong></p>
+                <p>10 Avenue de la Paix</p>
+                <p>Kinshasa, RDC 999</p>
+                <p>info@ccne-rdc.org</p>
+                <p>(243) 555-2300</p>
+            </div>
+            <div class="social-networks">
+                <a href="#" aria-label="YouTube">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill="currentColor"
+                            d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.7 15.5V8.5L15.8 12l-6.1 3.5z" />
+                    </svg>
+                </a>
+                <a href="https://twitter.com/informagenie" target="_blank" aria-label="Twitter">
+                    <img src="images/twitter-x.svg" alt="">
+                </a>
+                <a href="https://linkedin.com/in/mmngoms" target="_blank" aria-label="LinkedIn">
+                    <img src="images/linkedin.svg" alt="">
+                </a>
+            </div>
+            <div class="copyright">
+                <p>WDD 231 Class Project</p>
+                <p>Mercy Mbungu</p>
+                <p>&copy; <span id="currentYear"></span> CCNE-RDC</p>
+                <p id="lastModified"></p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
