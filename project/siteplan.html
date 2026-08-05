@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlavorShelf | Site Plan</title>
+    <meta name="description"
+        content="Site plan for FlavorShelf, a Recipe Catalog website for browsing, searching, and saving recipes.">
+    <meta name="author" content="Mercy Mbungu">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Nunito+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/siteplan.css">
+</head>
+
+<body>
+    <header>
+        <div class="site-brand">
+            <h1>FlavorShelf</h1>
+            <p>Website Planning Document — Recipe Catalog Project (WDD 231)</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#site-name">Site Name</a></li>
+            <li><a href="#site-purpose">Purpose</a></li>
+            <li><a href="#scenarios">Scenarios</a></li>
+            <li><a href="#color-scheme">Color Scheme</a></li>
+            <li><a href="#typography">Typography</a></li>
+            <li><a href="#wireframes">Wireframes</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="site-name">
+            <h2>Site Name</h2>
+            <p><strong>FlavorShelf</strong></p>
+            <p>
+                This name was selected because it suggests a curated “shelf” of flavors and recipes that
+                visitors can browse, discover, and keep nearby. It communicates both variety (many cuisines
+                and categories) and organization (a catalog you can search and save to favorites).
+            </p>
+            <p class="note">Url: <strong>flavorshelf.com</strong>.</p>
+        </section>
+
+        <section id="site-purpose">
+            <h2>Site Purpose</h2>
+            <p>
+                FlavorShelf is a Recipe Catalog that helps home cooks and food enthusiasts discover recipes
+                from different cuisines and categories. The site provides recipe details such as name, image,
+                category, cuisine, and preparation instructions. Visitors can search and filter recipes, open
+                full details in a modal window, save favorites with Local Storage, and submit a contact or
+                recipe suggestion form.
+            </p>
+            <h3>Main pages</h3>
+            <ul>
+                <li><strong>Home</strong> — introduction to the site, featured recipes, and a search section.</li>
+                <li><strong>Recipe Catalog</strong> — at least fifteen recipes from an API or local JSON, with filtering and search.</li>
+                <li><strong>Favorites</strong> — recipes the user has saved in the browser’s Local Storage.</li>
+                <li><strong>Contact / Suggest a Recipe</strong> — an HTML form for questions or recipe suggestions.</li>
+            </ul>
+        </section>
+
+        <section id="scenarios">
+            <h2>Scenarios</h2>
+            <p>These questions represent visitors from the target audience and help shape the site content:</p>
+            <ul>
+                <li>How can I quickly find Italian dinner recipes that match a specific category?</li>
+                <li>Where can I view full preparation instructions for a recipe without leaving the page?</li>
+                <li>How do I save my favorite recipes so I can return to them later on this device?</li>
+                <li>How can I suggest a new recipe or contact the site owner?</li>
+            </ul>
+        </section>
+
+        <section id="color-scheme">
+            <h2>Color Scheme</h2>
+            <p>
+                The palette uses a deep herb green for structure and trust, a warm chili accent for calls to
+                action, a soft cool background for readability, and near-black text for clear body copy.
+                These colors are applied exclusively throughout this planning document.
+            </p>
+
+            <div class="swatches">
+                <article class="swatch">
+                    <div class="swatch-color" style="background:#1a5f5a;" aria-hidden="true"></div>
+                    <div class="swatch-info">
+                        <strong>Herb Green</strong>
+                        <span>#1A5F5A</span>
+                        <span>Headings, header, primary branding</span>
+                    </div>
+                </article>
+
+                <article class="swatch">
+                    <div class="swatch-color" style="background:#e85d4c;" aria-hidden="true"></div>
+                    <div class="swatch-info">
+                        <strong>Chili Accent</strong>
+                        <span>#E85D4C</span>
+                        <span>Links, accent underlines, buttons / CTAs</span>
+                    </div>
+                </article>
+
+                <article class="swatch">
+                    <div class="swatch-color" style="background:#f5f7f6; border-right:1px solid #d9e2e0;"
+                        aria-hidden="true"></div>
+                    <div class="swatch-info">
+                        <strong>Cool Mist</strong>
+                        <span>#F5F7F6</span>
+                        <span>Page background</span>
+                    </div>
+                </article>
+
+                <article class="swatch">
+                    <div class="swatch-color" style="background:#1a1a1a;" aria-hidden="true"></div>
+                    <div class="swatch-info">
+                        <strong>Charcoal</strong>
+                        <span>#1A1A1A</span>
+                        <span>Body text and strong labels</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="typography">
+            <h2>Typography</h2>
+            <p>Two fonts are selected to keep the design clear and readable while giving the brand a cookbook feel.</p>
+
+            <h3>Libre Baskerville — Headings</h3>
+            <p class="font-sample-heading">Discover recipes from every cuisine</p>
+            <p>
+                Used for the site name, section headings (h1–h3), and other display text. The serif style feels
+                editorial and food-related without reducing readability at larger sizes.
+            </p>
+
+            <h3>Nunito Sans — Body &amp; UI</h3>
+            <p class="font-sample-body">
+                Used for paragraphs, navigation, lists, form labels, and general interface text. It stays
+                clean and comfortable for longer reading on mobile and desktop.
+            </p>
+        </section>
+
+        <section id="wireframes">
+            <h2>Wireframes</h2>
+            <p>
+                Black-and-white wireframes for the <strong>Home</strong> page focus on structure and layout
+                for small and large viewports. Boxes represent content regions (header, intro, search,
+                featured recipes, footer) before visual design is applied.
+            </p>
+
+            <h3>Small Viewport (Mobile)</h3>
+            <figure class="wireframe-figure">
+                <div class="wireframe-frame">
+                    <img src="images/wireframe-small.webp" width="320" height="720"
+                        alt="Black and white wireframe of the FlavorShelf home page on a small mobile screen showing stacked header, intro, search, featured recipes, and footer">
+                </div>
+                <figcaption>
+                    Mobile layout stacks the logo/header, introduction, search bar, featured recipe cards,
+                    and footer vertically.
+                </figcaption>
+            </figure>
+
+            <h3>Large Viewport (Tablet / Desktop)</h3>
+            <figure class="wireframe-figure">
+                <div class="wireframe-frame">
+                    <img src="images/wireframe-large.webp" width="900" height="620"
+                        alt="Black and white wireframe of the FlavorShelf home page on a large desktop screen showing horizontal navigation and a three-column featured recipes row">
+                </div>
+                <figcaption>
+                    Desktop layout uses a horizontal navigation bar and displays featured recipes in a
+                    three-column row beneath the intro and search sections.
+                </figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 FlavorShelf — Site Plan by Mercy Mbungu | WDD 231</p>
+    </footer>
+</body>
+
+</html>
