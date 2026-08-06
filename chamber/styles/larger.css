@@ -125,3 +125,28 @@
         font-size: .6rem;
     }
 }
+
+/* Large screens: 1025px and above */
+@media only screen and (min-width: 1025px) {
+    main.discover {
+        max-width: 1200px;
+    }
+
+    .discover-gallery {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "card1 card1 card2 card3"
+            "card4 card5 card5 card6"
+            "card7 card8 card8 card6";
+        gap: 1.5rem;
+    }
+
+    .discover-card img {
+        transition: transform 0.35s ease, filter 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .discover-card figure:hover img {
+        transform: scale(1.08);
+        filter: brightness(1.1) saturate(1.15);
+    }
+}

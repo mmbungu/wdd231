@@ -661,3 +661,93 @@ footer .description p:first-child {
 .social-networks img {
     filter: brightness(0) invert(1);
 }
+
+/* Discover page */
+.discover-intro {
+    margin-bottom: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.visit-message {
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 0.85rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.25rem;
+    font-weight: 600;
+}
+
+.discover-gallery {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
+}
+
+.discover-card {
+    background-color: #e4e4e4;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+.discover-card h2 {
+    font-size: 1.15rem;
+    color: var(--secondary-color);
+}
+
+.discover-card figure {
+    margin: 0;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.discover-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+}
+
+.discover-card address {
+    font-style: normal;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.discover-card p {
+    font-size: 0.9rem;
+    line-height: 1.45;
+    color: #333;
+    flex-grow: 1;
+}
+
+.discover-card button {
+    align-self: start;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 0.55rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+}
+
+.discover-card button:hover,
+.discover-card button:focus {
+    background-color: var(--secondary-color);
+}

@@ -3,27 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - CCNRDC Chambre de commerce</title>
-    <meta name="description" content="Welcome to the CCNRDC Chamber of Commerce website. This is the official website where we showcase our services, events, and resources for businesses.">
+    <title>Discover - CCNRDC Chambre de commerce</title>
+    <meta name="description" content="Discover Kinshasa with CCNE-RDC. Explore landmarks, culture, business districts, and opportunities in the Democratic Republic of the Congo capital.">
     <meta name="author" content="Mercy Mbungu">
 
-    <meta property="og:title" content="CCNRDC - Chambre de commerce">
-    <meta property="og:description" content="Welcome to the CCNRDC Chamber of Commerce website. This is the official website where we showcase our services, events, and resources for businesses.">
+    <meta property="og:title" content="CCNRDC - Discover Kinshasa">
+    <meta property="og:description" content="Discover Kinshasa with CCNE-RDC. Explore landmarks, culture, business districts, and opportunities in the capital.">
     <meta property="og:image" content="https://mmbungu.github.io/wdd231/chamber/images/logo.png">
-    <meta property="og:url" content="https://mmbungu.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://mmbungu.github.io/wdd231/chamber/discover.html">
 
-    <meta name="twitter:title" content="CCNRDC - Chambre de commerce">
-    <meta name="twitter:description" content="Welcome to the CCNRDC Chamber of Commerce website. This is the official website where we showcase our services, events, and resources for businesses.">
-    <meta name="twitter:url" content="https://mmbungu.github.io/wdd231/chamber/directory.html">
+    <meta name="twitter:title" content="CCNRDC - Discover Kinshasa">
+    <meta name="twitter:description" content="Discover Kinshasa with CCNE-RDC. Explore landmarks, culture, business districts, and opportunities in the capital.">
+    <meta name="twitter:url" content="https://mmbungu.github.io/wdd231/chamber/discover.html">
     <meta name="twitter:image" content="https://mmbungu.github.io/wdd231/chamber/images/logo.png">
 
     <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/app.js" defer></script>
+    <script src="scripts/discover.js" type="module"></script>
     <link rel="icon" href="images/favicon.ico">
 </head>
 <body>
@@ -31,49 +32,27 @@
         <header>
             <img src="images/logo-icon.png" width="16" height="16" alt="Home">
             <span>CCNE-RDC</span>
-            <button id="mode-button" class="mode-switch"></button>
+            <button id="mode-button" aria-label="mode switch" class="mode-switch"></button>
             <button id="nav-button" class="hamburger" aria-label="navigation"></button>
             <nav id="nav-bar" class="navigation">
                 <ul>
-                    <li class="current"><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="directory.html">Directory</a></li>
                     <li><a href="join.html">Join</a></li>
-                    <li><a href="discover.html">Discover</a></li>
+                    <li class="current"><a href="discover.html">Discover</a></li>
                 </ul>
             </nav>
         </header>
 
-        <main>
-            <section class="hero">
-                <h1>CCNRDC Chambre de commerce</h1>
-                <img src="images/hero.webp" alt="CCNE-RDC Chamber of Commerce">
-                <a class="cta" href="join.html">Join the Chamber</a>
-            </section>
+        <main class="discover">
+            <h1>Discover Kinshasa</h1>
+            <p class="discover-intro">Kinshasa is one of Africa's largest cities and a gateway for business across the Democratic Republic of the Congo. Explore places that showcase our culture, commerce, and community.</p>
 
-            <section class="events">
-                <h2>Current Events</h2>
-                <article>
-                    <h3>Networking Breakfast</h3>
-                    <span class="date">Date: Tuesday, August 5, 2026</span>
-                    <p>Connect with local business leaders over breakfast and discover partnership opportunities.</p>
-                </article>
-                <article>
-                    <h3>Business Development Workshop</h3>
-                    <span class="date">Date: Friday, August 15, 2026</span>
-                    <p>Learn practical strategies to grow your business in Kinshasa and beyond.</p>
-                </article>
-            </section>
+            <aside class="visit-message" id="visit-message" aria-live="polite"></aside>
 
-            <section class="weather">
-                <h2>Weather</h2>
-                <div id="weather-info"></div>
-            </section>
-
-            <section class="spotlights">
-                <h2>Member Spotlights</h2>
-                <div id="spotlights" class="card-grid"></div>
-            </section>
+            <section class="discover-gallery" id="discover-gallery" aria-label="Places of interest"></section>
         </main>
+
         <footer>
             <div class="description">
                 <p><strong>CCNE-RDC</strong></p>

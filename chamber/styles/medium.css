@@ -1,0 +1,22 @@
+/* Medium screens: 641px to 1024px */
+@media only screen and (min-width: 641px) and (max-width: 64rem) {
+    .discover-gallery {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "card1 card1"
+            "card2 card3"
+            "card4 card5"
+            "card6 card6"
+            "card7 card8";
+        gap: 1.25rem;
+    }
+
+    .discover-card img {
+        transition: transform 0.35s ease, filter 0.35s ease;
+    }
+
+    .discover-card figure:hover img {
+        transform: scale(1.06);
+        filter: brightness(1.08) contrast(1.05);
+    }
+}
