@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlavorShelf | Recipe Catalog</title>
+    <meta name="description"
+        content="FlavorShelf helps you browse, search, and save recipes from cuisines around the world.">
+    <meta name="author" content="Mercy Mbungu">
+
+    <meta property="og:title" content="FlavorShelf | Recipe Catalog">
+    <meta property="og:description"
+        content="Browse, search, and save recipes from cuisines around the world.">
+    <meta property="og:url" content="https://mmbungu.github.io/wdd231/project/">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="FlavorShelf | Recipe Catalog">
+    <meta name="twitter:description"
+        content="Browse, search, and save recipes from cuisines around the world.">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Nunito+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+    <script src="scripts/navigation.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="images/logo.png" width="32" height="32" alt="">
+            <a class="site-name" href="index.html">FlavorShelf</a>
+            <button id="nav-button" class="hamburger" type="button" aria-label="Toggle navigation"
+                aria-expanded="false" aria-controls="nav-bar"></button>
+            <nav id="nav-bar" class="navigation" aria-label="Main navigation">
+                <ul>
+                    <li class="current"><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="#">Catalog</a></li>
+                    <li><a href="#">Favorites</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div>
+                    <p><strong>FlavorShelf</strong></p>
+                    <p>Discover recipes from every cuisine and save your favorites.</p>
+                    <p>
+                        Recipe data provided by
+                        <a href="https://www.themealdb.com/" target="_blank" rel="noopener noreferrer">TheMealDB</a>.
+                    </p>
+                </div>
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Catalog</a></li>
+                        <li><a href="#">Favorites</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="footer-meta">
+                    <p>WDD 231 Class Project — Mercy Mbungu</p>
+                    <p>&copy; <span id="currentYear"></span> FlavorShelf</p>
+                    <p id="lastModified"></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

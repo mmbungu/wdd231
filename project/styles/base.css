@@ -1,0 +1,215 @@
+:root {
+    --color-primary: #1a5f5a;
+    --color-primary-dark: #134643;
+    --color-accent: #e85d4c;
+    --color-accent-dark: #c94a3b;
+    --color-background: #f5f7f6;
+    --color-surface: #ffffff;
+    --color-text: #1a1a1a;
+    --color-muted: #4a5560;
+    --color-border: #d9e2e0;
+    --font-heading: "Libre Baskerville", Georgia, serif;
+    --font-body: "Nunito Sans", "Segoe UI", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--color-text);
+    background: var(--color-background);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: var(--color-accent);
+}
+
+a:hover,
+a:focus {
+    color: var(--color-accent-dark);
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem 2rem;
+}
+
+main h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    color: var(--color-primary);
+    margin: 1.5rem 0 0.75rem;
+}
+
+main h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.35rem, 3vw, 1.65rem);
+    color: var(--color-primary);
+    margin: 1.25rem 0 0.75rem;
+}
+
+main p {
+    color: var(--color-muted);
+    margin: 0 0 1rem;
+}
+
+footer {
+    background: var(--color-primary-dark);
+    color: #e8f3f2;
+    padding: 1.5rem 1rem;
+}
+
+footer a {
+    color: #ffd7d2;
+}
+
+footer a:hover,
+footer a:focus {
+    color: #fff;
+}
+
+.footer-content {
+    max-width: 960px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1.25rem;
+}
+
+.footer-content p {
+    margin: 0 0 0.35rem;
+    color: #e8f3f2;
+}
+
+.footer-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+}
+
+.footer-nav a {
+    text-decoration: none;
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus {
+    text-decoration: underline;
+}
+
+.footer-meta {
+    font-size: 0.95rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 1rem;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 40px 1fr 44px;
+    column-gap: 0.75rem;
+    align-items: center;
+    background: var(--color-primary);
+    color: #fff;
+    padding: 0.75rem 1rem;
+    border-bottom: 3px solid var(--color-accent);
+}
+
+header img {
+    width: 32px;
+    height: 32px;
+    color: #fff;
+}
+
+header .site-name {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+}
+
+header .site-name:hover,
+header .site-name:focus {
+    color: #ffd7d2;
+}
+
+.hamburger {
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 0.25rem;
+    line-height: 1;
+}
+
+.hamburger::before {
+    content: "\2630";
+    font-size: 1.5rem;
+}
+
+.hamburger.show::before {
+    content: "\00D7";
+    font-size: 1.75rem;
+}
+
+.navigation {
+    display: none;
+    grid-column: 1 / -1;
+    background: var(--color-primary-dark);
+    margin: 0.75rem -1rem -0.75rem;
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 0.85rem 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    font-weight: 600;
+}
+
+.navigation li.current > a {
+    background: var(--color-accent);
+    color: #fff;
+}
+
+.navigation a:hover,
+.navigation a:focus {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
