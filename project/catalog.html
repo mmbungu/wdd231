@@ -4,21 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FlavorShelf | Recipe Catalog</title>
+    <title>Recipe Catalog | FlavorShelf</title>
     <meta name="description"
-        content="FlavorShelf helps you browse, search, and save recipes from cuisines around the world.">
+        content="Browse, filter, and search recipes from different cuisines and categories on FlavorShelf.">
     <meta name="author" content="Mercy Mbungu">
 
-    <meta property="og:title" content="FlavorShelf | Recipe Catalog">
+    <meta property="og:title" content="Recipe Catalog | FlavorShelf">
     <meta property="og:description"
-        content="Browse, search, and save recipes from cuisines around the world.">
-    <meta property="og:url" content="https://mmbungu.github.io/wdd231/project/">
+        content="Browse, filter, and search recipes from different cuisines and categories.">
+    <meta property="og:url" content="https://mmbungu.github.io/wdd231/project/catalog.html">
     <meta property="og:type" content="website">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="FlavorShelf | Recipe Catalog">
+    <meta name="twitter:title" content="Recipe Catalog | FlavorShelf">
     <meta name="twitter:description"
-        content="Browse, search, and save recipes from cuisines around the world.">
+        content="Browse, filter, and search recipes from different cuisines and categories.">
 
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
@@ -29,7 +29,7 @@
         href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Nunito+Sans:wght@400;600;700&display=swap"
         rel="stylesheet">
     <link rel="icon" href="images/logo.png" type="image/png">
-    <script type="module" src="scripts/home.js" defer></script>
+    <script type="module" src="scripts/catalog.js" defer></script>
     <script defer src="scripts/navigation.js"></script>
 </head>
 
@@ -42,8 +42,8 @@
                 aria-expanded="false" aria-controls="nav-bar"></button>
             <nav id="nav-bar" class="navigation" aria-label="Main navigation">
                 <ul>
-                    <li class="current"><a href="index.html" aria-current="page">Home</a></li>
-                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="current"><a href="catalog.html" aria-current="page">Catalog</a></li>
                     <li><a href="favorites.html">Favorites</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -51,33 +51,54 @@
         </header>
 
         <main>
-            <section class="hero">
-                <h1>Discover Recipes from Every Cuisine</h1>
-                <p>
-                    Welcome to FlavorShelf. Browse meals from around the world, search the catalog,
-                    and save your favorites to revisit later on this device.
-                </p>
-                <a class="cta" href="catalog.html">Browse Catalog</a>
+            <section class="catalog-intro">
+                <h1>Recipe Catalog</h1>
+                <p>Browse at least fifteen recipes, filter by category or cuisine, and open full details in a modal.</p>
             </section>
 
-            <section class="search-section" aria-labelledby="search-heading">
-                <h2 id="search-heading">Search Recipes</h2>
-                <p>Find a recipe by name before exploring the full catalog.</p>
-                <form id="search-form" class="search-form" action="catalog.html" method="get">
-                    <label class="visually-hidden" for="search-input">Search recipes</label>
-                    <input type="search" id="search-input" name="search"
-                        placeholder="Search by recipe name..." autocomplete="off" required>
-                    <button type="submit" class="cta">Search</button>
+            <section class="catalog-filters" aria-labelledby="filters-heading">
+                <h2 id="filters-heading">Filter &amp; Search</h2>
+                <form id="catalog-filters-form" class="filters-form">
+                    <div class="filter-field">
+                        <label for="category-filter">Category</label>
+                        <select id="category-filter" name="category">
+                            <option value="">All Categories</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-field">
+                        <label for="area-filter">Cuisine</label>
+                        <select id="area-filter" name="area">
+                            <option value="">All Cuisines</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-field">
+                        <label for="catalog-search">Search</label>
+                        <input type="search" id="catalog-search" name="search"
+                            placeholder="Search by recipe name..." autocomplete="off">
+                    </div>
+
+                    <button type="submit" class="cta">Apply Filters</button>
                 </form>
             </section>
 
-            <section class="featured" aria-labelledby="featured-heading">
-                <h2 id="featured-heading">Featured Recipes</h2>
-                <div id="featured-recipes" class="featured-grid">
-                    <p class="status-message">Loading featured recipes...</p>
+            <section class="catalog-results" aria-labelledby="results-heading">
+                <h2 id="results-heading">Results</h2>
+                <p id="results-count" class="status-message">Loading recipes...</p>
+                <div id="catalog-recipes" class="catalog-grid">
+                    <p class="status-message">Loading recipes...</p>
                 </div>
             </section>
         </main>
+
+        <div id="recipe-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+            <div class="modal-overlay" data-close-modal></div>
+            <div class="modal-content">
+                <button type="button" class="modal-close" aria-label="Close modal">&times;</button>
+                <div id="modal-body"></div>
+            </div>
+        </div>
 
         <footer>
             <div class="footer-content">

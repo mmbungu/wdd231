@@ -31,3 +31,56 @@ export const getRandomMeals = async (count) => {
 
     return meals;
 }
+
+export const getCategories = async () => {
+    const data = await fetchJson(`${API_BASE}/categories.php`);
+    return data.categories ? data.categories : [];
+}
+
+export const getAreas = async () => {
+    const data = await fetchJson(`${API_BASE}/list.php?a=list`);
+    return data.meals ? data.meals.map((item) => item.strArea) : [];
+}
+
+export const getMealsByCategory = async (category) => {
+    const data = await fetchJson(`${API_BASE}/filter.php?c=${encodeURIComponent(category)}`);
+    return data.meals ? data.meals.map((meal) => ({ ...meal, strCategory: category })) : [];
+}
+
+export const getMealsByArea = async (area) => {
+    const data = await fetchJson(`${API_BASE}/filter.php?a=${encodeURIComponent(area)}`);
+    return data.meals ? data.meals.map((meal) => ({ ...meal, strArea: area })) : [];
+}
+
+export const searchMeals = async (term) => {
+    const data = await fetchJson(`${API_BASE}/search.php?s=${encodeURIComponent(term)}`);
+    return data.meals ? data.meals : [];
+}
+
+export const getMealById = async (id) => {
+    const data = await fetchJson(`${API_BASE}/lookup.php?i=${encodeURIComponent(id)}`);
+    return data.meals ? data.meals[0] : null;
+}
+
+export const loadInitialCatalog = async (minCount = 15) => {
+    const categories = ["Seafood", "Chicken", "Dessert"];
+    const meals = [];
+    const seenIds = new Set();
+
+    for (const category of categories) {
+        const categoryMeals = await getMealsByCategory(category);
+
+        categoryMeals.forEach((meal) => {
+            if (!seenIds.has(meal.idMeal)) {
+                seenIds.add(meal.idMeal);
+                meals.push(meal);
+            }
+        });
+
+        if (meals.length >= minCount) {
+            break;
+        }
+    }
+
+    return meals.slice(0, Math.max(minCount, meals.length));
+}

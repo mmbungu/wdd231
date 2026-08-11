@@ -49,4 +49,13 @@
     .featured-grid {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    .filters-form {
+        grid-template-columns: repeat(3, 1fr) auto;
+        align-items: end;
+    }
+
+    .catalog-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
