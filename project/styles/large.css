@@ -40,4 +40,13 @@
     .footer-meta {
         grid-column: 1 / -1;
     }
+
+    .search-form {
+        grid-template-columns: 1fr auto;
+        align-items: center;
+    }
+
+    .featured-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }

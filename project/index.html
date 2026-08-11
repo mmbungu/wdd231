@@ -28,8 +28,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Nunito+Sans:wght@400;600;700&display=swap"
         rel="stylesheet">
-    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
-    <script src="scripts/navigation.js" defer></script>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <script type="module" src="scripts/api.js" defer></script>
+    <script type="module" src="scripts/home.js" defer></script>
+    <script defer src="scripts/navigation.js"></script>
 </head>
 
 <body>
@@ -42,15 +44,40 @@
             <nav id="nav-bar" class="navigation" aria-label="Main navigation">
                 <ul>
                     <li class="current"><a href="index.html" aria-current="page">Home</a></li>
-                    <li><a href="#">Catalog</a></li>
-                    <li><a href="#">Favorites</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="favorites.html">Favorites</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </header>
 
         <main>
-            
+            <section class="hero">
+                <h1>Discover Recipes from Every Cuisine</h1>
+                <p>
+                    Welcome to FlavorShelf. Browse meals from around the world, search the catalog,
+                    and save your favorites to revisit later on this device.
+                </p>
+                <a class="cta" href="catalog.html">Browse Catalog</a>
+            </section>
+
+            <section class="search-section" aria-labelledby="search-heading">
+                <h2 id="search-heading">Search Recipes</h2>
+                <p>Find a recipe by name before exploring the full catalog.</p>
+                <form id="search-form" class="search-form" action="catalog.html" method="get">
+                    <label class="visually-hidden" for="search-input">Search recipes</label>
+                    <input type="search" id="search-input" name="search"
+                        placeholder="Search by recipe name..." autocomplete="off" required>
+                    <button type="submit" class="cta">Search</button>
+                </form>
+            </section>
+
+            <section class="featured" aria-labelledby="featured-heading">
+                <h2 id="featured-heading">Featured Recipes</h2>
+                <div id="featured-recipes" class="featured-grid">
+                    <p class="status-message">Loading featured recipes...</p>
+                </div>
+            </section>
         </main>
 
         <footer>
@@ -66,9 +93,9 @@
                 <nav class="footer-nav" aria-label="Footer navigation">
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="#">Catalog</a></li>
-                        <li><a href="#">Favorites</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="catalog.html">Catalog</a></li>
+                        <li><a href="favorites.html">Favorites</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </nav>
                 <div class="footer-meta">
