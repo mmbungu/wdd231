@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | FlavorShelf</title>
+    <meta name="description" content="Thank you for contacting FlavorShelf.">
+    <meta name="author" content="Mercy Mbungu">
+
+    <meta property="og:title" content="Thank You | FlavorShelf">
+    <meta property="og:description" content="Thank you for contacting FlavorShelf.">
+    <meta property="og:url" content="https://mmbungu.github.io/wdd231/project/thankyou.html">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Thank You | FlavorShelf">
+    <meta name="twitter:description" content="Thank you for contacting FlavorShelf.">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Nunito+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <script src="scripts/contact.js" defer></script>
+    <script defer src="scripts/navigation.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="images/logo.png" width="32" height="32" alt="">
+            <a class="site-name" href="index.html">FlavorShelf</a>
+            <button id="nav-button" class="hamburger" type="button" aria-label="Toggle navigation"
+                aria-expanded="false" aria-controls="nav-bar"></button>
+            <nav id="nav-bar" class="navigation" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="favorites.html">Favorites</a></li>
+                    <li class="current"><a href="contact.html" aria-current="page">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="thankyou">
+            <section class="catalog-intro">
+                <h1>Thank You!</h1>
+                <p>We received your message. Here is a summary of what you submitted:</p>
+            </section>
+
+            <section class="submitted-info">
+                <p><span class="info-label">First Name:</span> <span id="show-firstname"></span></p>
+                <p><span class="info-label">Email:</span> <span id="show-email"></span></p>
+                <p><span class="info-label">Inquiry Type:</span> <span id="show-inquiry"></span></p>
+                <p id="show-recipe-row" hidden><span class="info-label">Recipe Name:</span> <span id="show-recipename"></span></p>
+                <p><span class="info-label">Message:</span> <span id="show-message"></span></p>
+                <p><span class="info-label">Submitted:</span> <span id="show-timestamp"></span></p>
+            </section>
+
+            <p><a class="cta" href="index.html">Return to Home</a></p>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div>
+                    <p><strong>FlavorShelf</strong></p>
+                    <p>Discover recipes from every cuisine and save your favorites.</p>
+                    <p>
+                        Recipe data provided by
+                        <a href="https://www.themealdb.com/" target="_blank" rel="noopener noreferrer">TheMealDB</a>.
+                    </p>
+                </div>
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="catalog.html">Catalog</a></li>
+                        <li><a href="favorites.html">Favorites</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="footer-meta">
+                    <p>WDD 231 Class Project — Mercy Mbungu</p>
+                    <p>&copy; <span id="currentYear"></span> FlavorShelf</p>
+                    <p id="lastModified"></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

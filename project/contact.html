@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | FlavorShelf</title>
+    <meta name="description"
+        content="Contact FlavorShelf or suggest a recipe to add to the catalog.">
+    <meta name="author" content="Mercy Mbungu">
+
+    <meta property="og:title" content="Contact | FlavorShelf">
+    <meta property="og:description" content="Contact FlavorShelf or suggest a recipe.">
+    <meta property="og:url" content="https://mmbungu.github.io/wdd231/project/contact.html">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Contact | FlavorShelf">
+    <meta name="twitter:description" content="Contact FlavorShelf or suggest a recipe.">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Nunito+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <script src="scripts/contact.js" defer></script>
+    <script defer src="scripts/navigation.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="images/logo.png" width="32" height="32" alt="">
+            <a class="site-name" href="index.html">FlavorShelf</a>
+            <button id="nav-button" class="hamburger" type="button" aria-label="Toggle navigation"
+                aria-expanded="false" aria-controls="nav-bar"></button>
+            <nav id="nav-bar" class="navigation" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="favorites.html">Favorites</a></li>
+                    <li class="current"><a href="contact.html" aria-current="page">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="catalog-intro">
+                <h1>Contact &amp; Recipe Suggestions</h1>
+                <p>Send a message or suggest a recipe you would like to see in the catalog.</p>
+            </section>
+
+            <section class="contact-section" aria-labelledby="contact-form-heading">
+                <h2 id="contact-form-heading">Get in Touch</h2>
+
+                <form class="contact-form" action="thankyou.html" method="get">
+                    <label for="firstname">First Name
+                        <input type="text" name="firstname" id="firstname" title="Please enter your first name"
+                            autocomplete="given-name" required>
+                    </label>
+
+                    <label for="email">Email Address
+                        <input type="email" name="email" id="email" title="Please enter a valid email address"
+                            autocomplete="email" placeholder="example@email.com" required>
+                    </label>
+
+                    <label for="inquiry">Inquiry Type
+                        <select name="inquiry" id="inquiry" title="Select the type of inquiry" required>
+                            <option value="">Choose one...</option>
+                            <option value="contact">General Contact</option>
+                            <option value="suggestion">Recipe Suggestion</option>
+                        </select>
+                    </label>
+
+                    <label for="recipe-name" id="recipe-name-label" hidden>Recipe Name
+                        <input type="text" name="recipename" id="recipe-name"
+                            title="Enter the recipe you would like to suggest">
+                    </label>
+
+                    <label for="message">Message
+                        <textarea name="message" id="message" title="Enter your message" rows="5" required></textarea>
+                    </label>
+
+                    <input type="hidden" name="timestamp" id="timestamp">
+
+                    <input type="submit" class="cta" value="Send Message">
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div>
+                    <p><strong>FlavorShelf</strong></p>
+                    <p>Discover recipes from every cuisine and save your favorites.</p>
+                    <p>
+                        Recipe data provided by
+                        <a href="https://www.themealdb.com/" target="_blank" rel="noopener noreferrer">TheMealDB</a>.
+                    </p>
+                </div>
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="catalog.html">Catalog</a></li>
+                        <li><a href="favorites.html">Favorites</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="footer-meta">
+                    <p>WDD 231 Class Project — Mercy Mbungu</p>
+                    <p>&copy; <span id="currentYear"></span> FlavorShelf</p>
+                    <p id="lastModified"></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
