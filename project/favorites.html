@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorites | FlavorShelf</title>
+    <meta name="description"
+        content="View and manage your saved favorite recipes on FlavorShelf.">
+    <meta name="author" content="Mercy Mbungu">
+
+    <meta property="og:title" content="My Favorites | FlavorShelf">
+    <meta property="og:description" content="View and manage your saved favorite recipes.">
+    <meta property="og:url" content="https://mmbungu.github.io/wdd231/project/favorites.html">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="My Favorites | FlavorShelf">
+    <meta name="twitter:description" content="View and manage your saved favorite recipes.">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Nunito+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <script type="module" src="scripts/favorites.js" defer></script>
+    <script defer src="scripts/navigation.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="images/logo.png" width="32" height="32" alt="">
+            <a class="site-name" href="index.html">FlavorShelf</a>
+            <button id="nav-button" class="hamburger" type="button" aria-label="Toggle navigation"
+                aria-expanded="false" aria-controls="nav-bar"></button>
+            <nav id="nav-bar" class="navigation" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li class="current"><a href="favorites.html" aria-current="page">Favorites</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="catalog-intro">
+                <h1>My Favorites</h1>
+                <p>Recipes you saved from the catalog are stored in your browser and listed below.</p>
+            </section>
+
+            <section class="catalog-results" aria-labelledby="favorites-heading">
+                <h2 id="favorites-heading">Saved Recipes</h2>
+                <p id="favorites-count" class="status-message">Loading favorites...</p>
+
+                <div id="favorites-empty" class="empty-state" hidden>
+                    <p>You have not saved any recipes yet.</p>
+                    <a class="cta" href="catalog.html">Browse the Catalog</a>
+                </div>
+
+                <div id="favorites-recipes" class="catalog-grid"></div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div>
+                    <p><strong>FlavorShelf</strong></p>
+                    <p>Discover recipes from every cuisine and save your favorites.</p>
+                    <p>
+                        Recipe data provided by
+                        <a href="https://www.themealdb.com/" target="_blank" rel="noopener noreferrer">TheMealDB</a>.
+                    </p>
+                </div>
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="catalog.html">Catalog</a></li>
+                        <li><a href="favorites.html">Favorites</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="footer-meta">
+                    <p>WDD 231 Class Project — Mercy Mbungu</p>
+                    <p>&copy; <span id="currentYear"></span> FlavorShelf</p>
+                    <p id="lastModified"></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
