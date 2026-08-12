@@ -28,7 +28,7 @@
     }
 
     .navigation li.current > a {
-        background: var(--color-accent);
+        background: var(--color-accent-button);
         text-decoration: none;
     }
 

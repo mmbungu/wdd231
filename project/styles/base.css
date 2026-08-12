@@ -1,13 +1,14 @@
 :root {
     --color-primary: #1a5f5a;
     --color-primary-dark: #134643;
-    --color-accent: #e85d4c;
-    --color-accent-dark: #c94a3b;
+    --color-accent: #c94a3b;
+    --color-accent-dark: #9e3629;
+    --color-accent-button: #9e3629;
     --color-background: #f5f7f6;
     --color-surface: #ffffff;
     --color-text: #1a1a1a;
-    --color-muted: #4a5560;
-    --color-border: #d9e2e0;
+    --color-muted: #3d454d;
+    --color-border: #9eb3ae;
     --font-heading: "Libre Baskerville", Georgia, serif;
     --font-body: "Nunito Sans", "Segoe UI", sans-serif;
 }
@@ -204,7 +205,7 @@ header .site-name:focus {
 }
 
 .navigation li.current > a {
-    background: var(--color-accent);
+    background: var(--color-accent-button);
     color: #fff;
 }
 
@@ -240,9 +241,12 @@ header .site-name:focus {
     margin-top: 0;
 }
 
-.cta {
+.cta,
+a.cta,
+button.cta,
+input.cta[type="submit"] {
     display: inline-block;
-    background: var(--color-accent);
+    background: var(--color-accent-button);
     color: #fff;
     text-decoration: none;
     font-weight: 700;
@@ -255,7 +259,13 @@ header .site-name:focus {
 }
 
 .cta:hover,
-.cta:focus {
+.cta:focus,
+a.cta:hover,
+a.cta:focus,
+button.cta:hover,
+button.cta:focus,
+input.cta[type="submit"]:hover,
+input.cta[type="submit"]:focus {
     background: var(--color-accent-dark);
     color: #fff;
 }
@@ -288,7 +298,7 @@ header .site-name:focus {
     border: 1px solid var(--color-border);
     border-radius: 8px;
     overflow: hidden;
-    background: var(--color-background);
+    background: var(--color-surface);
 }
 
 .recipe-card img {
@@ -317,10 +327,12 @@ header .site-name:focus {
 .recipe-link {
     font-weight: 600;
     text-decoration: none;
+    color: var(--color-accent-dark);
 }
 
 .recipe-link:hover,
 .recipe-link:focus {
+    color: var(--color-primary-dark);
     text-decoration: underline;
 }
 
@@ -362,6 +374,8 @@ header .site-name:focus {
     padding: 0.65rem 1.15rem;
     border-radius: 6px;
     text-decoration: none;
+    background: var(--color-accent-button);
+    color: #fff;
 }
 
 .recipe-actions .recipe-link:hover,
@@ -485,15 +499,15 @@ header .site-name:focus {
 }
 
 .favorite-btn.is-favorite {
-    background: var(--color-accent);
-    border-color: var(--color-accent);
+    background: var(--color-accent-button);
+    border-color: var(--color-accent-button);
     color: #fff;
 }
 
 .favorite-btn:hover,
 .favorite-btn:focus {
-    border-color: var(--color-accent);
-    color: var(--color-accent);
+    border-color: var(--color-accent-dark);
+    color: var(--color-accent-dark);
 }
 
 .favorite-btn.is-favorite:hover,
